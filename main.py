@@ -7,6 +7,12 @@ from src.some_storage_library import SomeStorageLibrary
 
 
 def transform_and_dump_data():
+    """Read and sort column headers from SOURCECOLUMNS.txt, read data
+    from SOURCEDATA.txt, and output the sorted header row and the data
+    into a CSV file in a comma-separated format.
+
+    :return: None
+    """
     column_order = {}
     with open('data/source/SOURCECOLUMNS.txt', 'r') as source_columns:
         source_columns_reader = csv.reader(source_columns, delimiter='|')
